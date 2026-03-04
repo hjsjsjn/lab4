@@ -79,6 +79,7 @@ alt="3D model in AR">
 <script>
 function toggleRotate() {
   const model = document.getElementById("model");
+  if (!model) return;   // хамгаалалт
 
   if (model.hasAttribute("auto-rotate")) {
     model.removeAttribute("auto-rotate");
@@ -86,6 +87,7 @@ function toggleRotate() {
     model.setAttribute("auto-rotate", "");
   }
 }
+
 
 function changeBg() {
   const viewer = document.getElementById("model");
@@ -100,6 +102,7 @@ function changeBg() {
 </body>
 
 </html>
+
 
 
 
