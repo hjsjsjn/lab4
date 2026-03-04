@@ -89,16 +89,18 @@ function toggleRotate() {
 
 function changeBg() {
   const viewer = document.getElementById("model");
+  if (!viewer) return;   // null хамгаалалт
+
   const colors = ["#f5f5f5", "#dfe6e9", "#ffeaa7", "#d0f0ff"];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-  viewer.style.background = randomColor;   // ← BODY биш, model-viewer өөрөө
+  viewer.style.background = randomColor;
 }
 </script>
 
 </body>
 
 </html>
+
 
 
 
